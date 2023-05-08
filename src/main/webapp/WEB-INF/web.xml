@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>Adjecti Website</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+
+		<servlet-name>Captcha</servlet-name>
+
+		<servlet-class>nl.captcha.servlet.StickyCaptchaServlet</servlet-class>
+
+		<init-param>
+			<param-name>mail-config</param-name>
+			<param-value>/mail.properties</param-value>
+		</init-param>
+		<init-param>
+			<param-name>upload-file</param-name>
+			<param-value>/upload-file</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+
+		<servlet-name>Captcha</servlet-name>
+
+		<url-pattern>/captcha_img.jpg</url-pattern>
+
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>home</display-name>
+		<servlet-name>home</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>services</display-name>
+		<servlet-name>services</servlet-name>
+		<jsp-file>/services.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>industries</display-name>
+		<servlet-name>industries</servlet-name>
+		<jsp-file>/industries.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>about</display-name>
+		<servlet-name>about</servlet-name>
+		<jsp-file>/about.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>career</display-name>
+		<servlet-name>career</servlet-name>
+		<jsp-file>/career.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>contact</display-name>
+		<servlet-name>contact</servlet-name>
+		<jsp-file>/contact.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>digital-experience</display-name>
+		<servlet-name>digital-experience</servlet-name>
+		<jsp-file>/services/digital_experience.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>data-intelligence</display-name>
+		<servlet-name>data-intelligence</servlet-name>
+		<jsp-file>/services/data_intelligence.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>search-analytics</display-name>
+		<servlet-name>search-analytics</servlet-name>
+		<jsp-file>/services/search_analytics.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>enterprise-services</display-name>
+		<servlet-name>enterprise-services</servlet-name>
+		<jsp-file>/services/enterprise_services.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>research-innovation</display-name>
+		<servlet-name>research-innovation</servlet-name>
+		<jsp-file>/services/research_innovation.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>banking</display-name>
+		<servlet-name>banking</servlet-name>
+		<jsp-file>/industries/banking.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>infrastructure</display-name>
+		<servlet-name>infrastructure</servlet-name>
+		<jsp-file>/industries/infrastructure.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>egovernance</display-name>
+		<servlet-name>egovernance</servlet-name>
+		<jsp-file>/industries/egovernance.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>education</display-name>
+		<servlet-name>education</servlet-name>
+		<jsp-file>/industries/education.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>manufacturing</display-name>
+		<servlet-name>manufacturing</servlet-name>
+		<jsp-file>/industries/manufacturing.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<display-name>events</display-name>
+		<servlet-name>events</servlet-name>
+		<jsp-file>/industries/events.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>home</servlet-name>
+		<url-pattern>/home.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>services</servlet-name>
+		<url-pattern>/services.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>industries</servlet-name>
+		<url-pattern>/industries.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>about</servlet-name>
+		<url-pattern>/about.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>career</servlet-name>
+		<url-pattern>/career.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>contact</servlet-name>
+		<url-pattern>/contact.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>digital-experience</servlet-name>
+		<url-pattern>/services/digital-experience.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>data-intelligence</servlet-name>
+		<url-pattern>/services/data-intelligence.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>search-analytics</servlet-name>
+		<url-pattern>/services/search-analytics.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>enterprise-services</servlet-name>
+		<url-pattern>/services/enterprise-services.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>research-innovation</servlet-name>
+		<url-pattern>/services/research-innovation.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>banking</servlet-name>
+		<url-pattern>/industries/banking.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>infrastructure</servlet-name>
+		<url-pattern>/industries/infrastructure.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>egovernance</servlet-name>
+		<url-pattern>/industries/egovernance.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>education</servlet-name>
+		<url-pattern>/industries/education.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>manufacturing</servlet-name>
+		<url-pattern>/industries/manufacturing.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>events</servlet-name>
+		<url-pattern>/industries/events.html</url-pattern>
+	</servlet-mapping>
+</web-app>
